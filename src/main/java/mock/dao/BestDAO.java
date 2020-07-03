@@ -1,4 +1,4 @@
-package mock.best;
+package mock.dao;
 
 import mock.db.DBClient;
 import mock.db.Person;

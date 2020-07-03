@@ -1,24 +1,22 @@
-package mock.better;
+package mock.dao;
 
-import mock.db.IDBClient;
+import mock.db.DBClient;
 import mock.db.Person;
-import mock.metrics.IMetrics;
+import mock.metrics.Metrics;
 
 import java.util.List;
 
 /**
- * Better implementation because we use dependency injection with interfaces. We can manually create
- * mock implementations of IDBClient and IMetrics to pass to our BetterDAO in unit tests.
- *
- * See BetterDAOTests for details
+ * Hard to unit test because we call new in the constructor.
+ * This means we can't provide mock implementations for DBClient and Metrics
  */
-public class BetterDAO {
-    private IDBClient db;
-    private IMetrics metrics;
+public class BadDAO {
+    private DBClient db;
+    private Metrics metrics;
 
-    public BetterDAO(IDBClient db, IMetrics metrics) {
-        this.db = db;
-        this.metrics = metrics;
+    public BadDAO() {
+        this.db = new DBClient();
+        this.metrics = new Metrics();
     }
 
     public String addPerson(Person person) {

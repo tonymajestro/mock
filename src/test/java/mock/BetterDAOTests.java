@@ -3,7 +3,7 @@
  */
 package mock;
 
-import mock.better.BetterDAO;
+import mock.dao.BetterDAO;
 import mock.db.IDBClient;
 import mock.db.Person;
 import mock.metrics.IMetrics;

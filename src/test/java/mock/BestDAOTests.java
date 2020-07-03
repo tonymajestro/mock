@@ -1,7 +1,7 @@
 package mock;
 
 import org.junit.Assert;
-import mock.best.BestDAO;
+import mock.dao.BestDAO;
 import mock.db.DBClient;
 import mock.db.Person;
 import mock.metrics.Metrics;
