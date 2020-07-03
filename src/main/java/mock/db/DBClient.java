@@ -14,6 +14,7 @@ public class DBClient implements IDBClient {
 
     public String addPerson(Person person) {
         String id = UUID.randomUUID().toString();
+        person.id = id;
         db.put(id, person);
         return id;
     }
